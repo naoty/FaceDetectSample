@@ -16,8 +16,12 @@
 		3DBDA6DB17B2425300D49247 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6DA17B2425300D49247 /* Default.png */; };
 		3DBDA6DD17B2425300D49247 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6DC17B2425300D49247 /* Default@2x.png */; };
 		3DBDA6DF17B2425300D49247 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6DE17B2425300D49247 /* Default-568h@2x.png */; };
-		3DBDA6E217B2425300D49247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6E017B2425300D49247 /* MainStoryboard.storyboard */; };
+		3DBDA6E217B2425300D49247 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6E017B2425300D49247 /* iPhone.storyboard */; };
 		3DBDA6E517B2425300D49247 /* FDSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDA6E417B2425300D49247 /* FDSViewController.m */; };
+		3DBDA6EC17B2432E00D49247 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6EB17B2432E00D49247 /* AVFoundation.framework */; };
+		3DBDA6EE17B2463400D49247 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6ED17B2463400D49247 /* iPad.storyboard */; };
+		3DBDA6F017B250D200D49247 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6EF17B250D200D49247 /* CoreVideo.framework */; };
+		3DBDA6F217B250DA00D49247 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6F117B250DA00D49247 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +38,13 @@
 		3DBDA6DA17B2425300D49247 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3DBDA6DC17B2425300D49247 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3DBDA6DE17B2425300D49247 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3DBDA6E117B2425300D49247 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3DBDA6E117B2425300D49247 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		3DBDA6E317B2425300D49247 /* FDSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDSViewController.h; sourceTree = "<group>"; };
 		3DBDA6E417B2425300D49247 /* FDSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDSViewController.m; sourceTree = "<group>"; };
+		3DBDA6EB17B2432E00D49247 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3DBDA6ED17B2463400D49247 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		3DBDA6EF17B250D200D49247 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3DBDA6F117B250DA00D49247 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBDA6F217B250DA00D49247 /* CoreMedia.framework in Frameworks */,
+				3DBDA6F017B250D200D49247 /* CoreVideo.framework in Frameworks */,
+				3DBDA6EC17B2432E00D49247 /* AVFoundation.framework in Frameworks */,
 				3DBDA6C917B2425300D49247 /* UIKit.framework in Frameworks */,
 				3DBDA6CB17B2425300D49247 /* Foundation.framework in Frameworks */,
 				3DBDA6CD17B2425300D49247 /* CoreGraphics.framework in Frameworks */,
@@ -73,9 +84,12 @@
 		3DBDA6C717B2425300D49247 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DBDA6C817B2425300D49247 /* UIKit.framework */,
-				3DBDA6CA17B2425300D49247 /* Foundation.framework */,
+				3DBDA6EB17B2432E00D49247 /* AVFoundation.framework */,
 				3DBDA6CC17B2425300D49247 /* CoreGraphics.framework */,
+				3DBDA6F117B250DA00D49247 /* CoreMedia.framework */,
+				3DBDA6EF17B250D200D49247 /* CoreVideo.framework */,
+				3DBDA6CA17B2425300D49247 /* Foundation.framework */,
+				3DBDA6C817B2425300D49247 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,7 +99,8 @@
 			children = (
 				3DBDA6D717B2425300D49247 /* FDSAppDelegate.h */,
 				3DBDA6D817B2425300D49247 /* FDSAppDelegate.m */,
-				3DBDA6E017B2425300D49247 /* MainStoryboard.storyboard */,
+				3DBDA6E017B2425300D49247 /* iPhone.storyboard */,
+				3DBDA6ED17B2463400D49247 /* iPad.storyboard */,
 				3DBDA6E317B2425300D49247 /* FDSViewController.h */,
 				3DBDA6E417B2425300D49247 /* FDSViewController.m */,
 				3DBDA6CF17B2425300D49247 /* Supporting Files */,
@@ -163,7 +178,8 @@
 				3DBDA6DB17B2425300D49247 /* Default.png in Resources */,
 				3DBDA6DD17B2425300D49247 /* Default@2x.png in Resources */,
 				3DBDA6DF17B2425300D49247 /* Default-568h@2x.png in Resources */,
-				3DBDA6E217B2425300D49247 /* MainStoryboard.storyboard in Resources */,
+				3DBDA6E217B2425300D49247 /* iPhone.storyboard in Resources */,
+				3DBDA6EE17B2463400D49247 /* iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,12 +207,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3DBDA6E017B2425300D49247 /* MainStoryboard.storyboard */ = {
+		3DBDA6E017B2425300D49247 /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3DBDA6E117B2425300D49247 /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -264,7 +280,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceDetectSample/FaceDetectSample-Prefix.pch";
 				INFOPLIST_FILE = "FaceDetectSample/FaceDetectSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,7 +293,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceDetectSample/FaceDetectSample-Prefix.pch";
 				INFOPLIST_FILE = "FaceDetectSample/FaceDetectSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
