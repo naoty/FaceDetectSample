@@ -38,6 +38,16 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    // サイズを調整する
+    CGSize rotatedSize = [self rotatedViewSize];
+    self.previewLayer.frame = CGRectMake(0, 0, rotatedSize.width, rotatedSize.height);
+    
+    // プレビューの向きをデバイスの向きに合わせる
+    self.previewLayer.connection.videoOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+}
+
 #pragma mark - Local methods
 
 - (void)setupAVCapture
@@ -162,7 +172,17 @@
     }
     
     // 検出する際の画像の向きを指定する
-    int exifOrientation = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 5 : 3;
+    int exifOrientation;
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+            exifOrientation = 6;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+        default:
+            exifOrientation = 3;
+            break;
+    }
     NSDictionary *imageOptions = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
     
     // 顔検出を実行する
