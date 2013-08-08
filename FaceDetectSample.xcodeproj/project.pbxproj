@@ -22,6 +22,8 @@
 		3DBDA6EE17B2463400D49247 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDA6ED17B2463400D49247 /* iPad.storyboard */; };
 		3DBDA6F017B250D200D49247 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6EF17B250D200D49247 /* CoreVideo.framework */; };
 		3DBDA6F217B250DA00D49247 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6F117B250DA00D49247 /* CoreMedia.framework */; };
+		3DBDA6F417B267D500D49247 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6F317B267D500D49247 /* CoreImage.framework */; };
+		3DBDA6F617B2684000D49247 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBDA6F517B2684000D49247 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		3DBDA6ED17B2463400D49247 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		3DBDA6EF17B250D200D49247 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		3DBDA6F117B250DA00D49247 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3DBDA6F317B267D500D49247 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3DBDA6F517B2684000D49247 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBDA6F617B2684000D49247 /* QuartzCore.framework in Frameworks */,
+				3DBDA6F417B267D500D49247 /* CoreImage.framework in Frameworks */,
 				3DBDA6F217B250DA00D49247 /* CoreMedia.framework in Frameworks */,
 				3DBDA6F017B250D200D49247 /* CoreVideo.framework in Frameworks */,
 				3DBDA6EC17B2432E00D49247 /* AVFoundation.framework in Frameworks */,
@@ -86,9 +92,11 @@
 			children = (
 				3DBDA6EB17B2432E00D49247 /* AVFoundation.framework */,
 				3DBDA6CC17B2425300D49247 /* CoreGraphics.framework */,
+				3DBDA6F317B267D500D49247 /* CoreImage.framework */,
 				3DBDA6F117B250DA00D49247 /* CoreMedia.framework */,
 				3DBDA6EF17B250D200D49247 /* CoreVideo.framework */,
 				3DBDA6CA17B2425300D49247 /* Foundation.framework */,
+				3DBDA6F517B2684000D49247 /* QuartzCore.framework */,
 				3DBDA6C817B2425300D49247 /* UIKit.framework */,
 			);
 			name = Frameworks;
