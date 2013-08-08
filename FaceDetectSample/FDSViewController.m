@@ -116,7 +116,21 @@
     return isPortrait ? CGSizeMake(min, max) : CGSizeMake(max, min);
 }
 
-- (void)drawRectOnLayer:(CALayer *)layer center:(CGPoint)center
+- (void)drawRectOnLayer:(CALayer *)layer rect:(CGRect)rect color:(CGColorRef)color
+{
+    CALayer *sublayer = [CALayer layer];
+    sublayer.frame = rect;
+    sublayer.backgroundColor = [[UIColor clearColor] CGColor];
+    sublayer.borderColor = color;
+    sublayer.borderWidth = 2.0;
+    
+    // 削除するときのために名前をつける
+    sublayer.name = @"FaceLayer";
+    
+    [layer addSublayer:sublayer];
+}
+
+- (void)drawRectOnLayer:(CALayer *)layer center:(CGPoint)center color:(CGColorRef)color
 {
     CGFloat width = 30;
     CGFloat height = 30;
@@ -124,7 +138,7 @@
     CALayer *sublayer = [CALayer layer];
     sublayer.frame = CGRectMake(center.x - width / 2, center.y - height / 2, width, height);
     sublayer.backgroundColor = [[UIColor clearColor] CGColor];
-    sublayer.borderColor = [[UIColor redColor] CGColor];
+    sublayer.borderColor = color;
     sublayer.borderWidth = 2.0;
     
     // 削除するときのために名前をつける
@@ -183,17 +197,20 @@
         }
         
         // 検出された顔の上に図形を描画する
+        CGColorRef redColor = [[UIColor redColor] CGColor];
         for (CIFaceFeature *feature in features) {
+            [self drawRectOnLayer:self.previewLayer rect:feature.bounds color:[[UIColor blackColor] CGColor]];
+            
             if ([feature hasLeftEyePosition]) {
-                [self drawRectOnLayer:self.previewLayer center:feature.leftEyePosition];
+                [self drawRectOnLayer:self.previewLayer center:feature.leftEyePosition color:redColor];
             }
             
             if ([feature hasRightEyePosition]) {
-                [self drawRectOnLayer:self.previewLayer center:feature.rightEyePosition];
+                [self drawRectOnLayer:self.previewLayer center:feature.rightEyePosition color:redColor];
             }
             
             if ([feature hasMouthPosition]) {
-                [self drawRectOnLayer:self.previewLayer center:feature.mouthPosition];
+                [self drawRectOnLayer:self.previewLayer center:feature.mouthPosition color:redColor];
             }
         }
     });
